@@ -1,3 +1,26 @@
-<p>
-  edit works!
-</p>
+<!-- item属性で受け取った情報だけフォーム表示 -->
+<form #myForm="ngForm" (ngSubmit)="onsubmit()" *ngIf="item">
+  <div>
+    <label for="isbn">
+      ISBNコード :</label><br>
+    <span id="isbn">{{item.isbn}}</span>
+  </div>
+  <!-- item属性（選択された書籍）をもとにフォームを生成-->
+  <div>
+    <label for="title">書籍 :</label><br>
+    <input type="text" id="title" name="title" [(ngModel)]="item.title">
+  </div>
+
+  <div>
+    <label for="price">価格 :</label><br>
+    <input type="number" id="price" name="price" [(ngModel)]="item.price">
+  </div>
+
+  <div>
+    <label for="publisher">出版社 :</label><br>
+    <input type="text" id="publisher" name="publisher" [(ngModel)]="item.publisher">
+  </div>
+
+
+  <input type="submit" value="編集">
+</form>

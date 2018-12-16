@@ -43,6 +43,26 @@ export class AppComponent {
   ];
   //リンクされた時に選択された書籍情報をselectedプロパティに保存
   onclick(book: Book) {
-    this.selected = book;
+    this.selected = {
+      isbn: book.isbn,
+      title: book.title,
+      price: book.price,
+      publisher: book.publisher
+    };
+  }
+
+  //editedイベントが発生したタイミングで実行
+  onedited(book: Book) {
+    //引数bookで、対応する配列booksを更新
+    for (let item of this.books) {
+    if ( item.isbn == book.isbn ) {
+      item.title = book.title;
+      item.price = book.price;
+      item.publisher = book.publisher;
+    }
+  }
+  //選択された書籍情報を空に（＝フォームを非表示にする）
+  this.selected = null;
+
   }
 }

@@ -4,4 +4,5 @@
   </span>
 </div>
 <hr>
-<detail-book [item]="selected"></detail-book>
+<p>編集中の書籍: {{edit.item?.title}}</p>
+<edit-book #edit [item]="selected" (edited)="onedited($event)"></edit-book>
