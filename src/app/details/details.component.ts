@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Book } from '../book';
 
 @Component({
@@ -6,13 +6,20 @@ import { Book } from '../book';
   templateUrl: './details.component.html',
   styleUrls: ['./details.component.scss']
 })
-export class DetailsComponent implements OnInit {
+export class DetailsComponent {
+  
+  //値を保持するためのプライベート変数を準備
+  private _item: Book;
 
-  @Input() item: Book;
+  //プライベート変数に値を設定するためのセッター
+  @Input()
+  set item(_item: Book) {
+    this._item = _item;
+  }
 
-  constructor() { }
-
-  ngOnInit() {
+  //プライベート変数に値を設定するためのゲッター
+  get item() {
+    return this._item;
   }
 
 }
