@@ -1,24 +1,24 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FormsModule }   from '@angular/forms';
 
-import { AppComponent } from './app.component';
-import { CoopComponent } from './coop/coop.component';
+import { DetailsComponent } from './details/details.component';
+import { EditComponent } from './edit/edit.component';
 
 
 
 @NgModule({
   declarations: [
-    AppComponent,
     DetailsComponent,
     EditComponent,
-    CoopComponent
   ],
   imports: [
-    BrowserModule,
+    CommonModule,
     FormsModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  exports: [
+    DetailsComponent,
+    EditComponent,
+  ]
 })
 export class AppModule { }

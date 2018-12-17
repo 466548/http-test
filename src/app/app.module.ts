@@ -3,8 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule }   from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { DetailsComponent } from './details/details.component';
-import { EditComponent } from './edit/edit.component';
+import { CoopComponent } from './coop/coop.component';
 
 
 
@@ -12,7 +11,8 @@ import { EditComponent } from './edit/edit.component';
   declarations: [
     AppComponent,
     DetailsComponent,
-    EditComponent
+    EditComponent,
+    CoopComponent
   ],
   imports: [
     BrowserModule,
