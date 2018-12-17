@@ -1,4 +1,5 @@
-# 書籍情報の一覧と詳細情報が表示するアプリを作っています
+# Angular　component　study
+書籍情報の一覧と詳細情報が表示するアプリを作っています
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.4.
 
