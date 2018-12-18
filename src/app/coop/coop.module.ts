@@ -4,6 +4,7 @@ import { FormsModule }   from '@angular/forms';
 
 import { DetailsComponent } from './details/details.component';
 import { EditComponent } from './edit/edit.component';
+import { CoopComponent } from './coop.component';
 
 
 
@@ -11,6 +12,7 @@ import { EditComponent } from './edit/edit.component';
   declarations: [
     DetailsComponent,
     EditComponent,
+    CoopComponent
   ],
   imports: [
     CommonModule,
@@ -18,7 +20,7 @@ import { EditComponent } from './edit/edit.component';
   ],
   exports: [
     DetailsComponent,
-    EditComponent,
+    EditComponent
   ]
 })
-export class AppModule { }
+export class CoopModule { }

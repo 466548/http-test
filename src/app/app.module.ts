@@ -1,22 +1,21 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule }   from '@angular/forms';
+import { CoopModule } from './coop/coop.module';
+
 
 import { AppComponent } from './app.component';
-import { CoopComponent } from './coop/coop.component';
 
 
 
 @NgModule({
   declarations: [
-    AppComponent,
-    DetailsComponent,
-    EditComponent,
-    CoopComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    CoopModule
   ],
   providers: [],
   bootstrap: [AppComponent]
